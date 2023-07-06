@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Oswaldo Birkner Zeferino</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            margin-top: 20px;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        .highlight {
+            background-color: #ffcc00;
+        }
+        <script>
+        function changeBackground(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+    </style>
+</head>
+<body>
+<div class="container" onmousemove="changeBackground('#ffcc00')" onmouseout="changeBackground('#ffffff')">
+    <header>
+        <h1>Meu Perfil - Oswaldo Birkner Zeferino</h1>
+        <img id="profileImg" src="fotoperfil.jpg" alt="Foto de Perfil">
+    </header>
+
+    <main>
+        <section>
+            <h2>Sobre mim</h2>
+            <p>Meu nome é Oswaldo Birkner Zeferino, tenho 24 anos, trabalho com administração,<br>
+                e estou buscando novos conhecimentos nesse curso, curto aprender e acredito <br>
+                que num futuro próximo eu possa estar trabalhando na área de desenvolvimento.</p>
+        </section>
+
+        <section>
+            <h2>Minhas redes sociais</h2>
+            <ul>
+                <li><a href="https://www.facebook.com/oswaldo.birknerz" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/BirknerOswaldo" target="_blank">Twitter</a></li>
+                <li><a href="https://www.instagram.com/OSWALDO_BIRKNER" target="_blank">Instagram</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Educação</h2>
+            <table>
+                <tr>
+                    <th>Instituição</th>
+                    <th>Grau</th>
+                    <th>Ano de conclusão</th>
+                </tr>
+                <tr>
+                    <td>SENAI</td>
+                    <td>Aprendizagem Industrial em Informática</td>
+                    <td>2014</td>
+                </tr>
+                <tr>
+                    <td>Luiz Delfino</td>
+                    <td>Ensino Médio</td>
+                    <td>2016</td>
+                </tr>
+                <tr>
+                    <td>SENAI</td>
+                    <td>Aprendizagem Industrial em Adiministração</td>
+                    <td>2017</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Experiência Profissional</h2>
+            <table>
+                <tr>
+                    <th>Empresa</th>
+                    <th>Cargo</th>
+                    <th>Período</th>
+                </tr>
+                <tr>
+                    <td>ARQ Soluções</td>
+                    <td>Auxiliar de Escritório</td>
+                    <td>2018 - 2019</td>
+                </tr>
+                <tr>
+                    <td>Senhor Descontos</td>
+                    <td>Assistente Administrativo</td>
+                    <td>2018 - 2019</td>
+                </tr>
+                <tr>
+                    <td>ARQ Soluções</td>
+                    <td>Assistente Administrativo</td>
+                    <td>2020 - Presente</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 - Oswaldo Birkner Zeferino. Todos os direitos reservados</p>
+    </footer>
+</div>
+
+<script>
+    // Mudar a cor de fundo ao passar o mouse
+    var profileImg = document.getElementById('profileImg');
+    profileImg.addEventListener('mouseover', function() {
+        profileImg.style.backgroundColor = '#ffcc00';
+    });
+    profileImg.addEventListener('mouseout', function() {
+        profileImg.style.backgroundColor = '';
+    });
+
+    // Mover a imagem ao clicar
+    profileImg.addEventListener('click', function() {
+        profileImg.style.transform = 'translate(100px, 100px)';
+        setTimeout(function() {
+            profileImg.style.transform = '';
+        }, 1000);
+    });
+
+    // Exibir um texto ao sair da imagem
+    profileImg.addEventListener('mouseout', function() {
+        var message = document.createElement('p');
+        message.textContent = 'Volte aqui!';
+        message.style.color = 'red';
+        profileImg.parentNode.insertBefore(message, profileImg.nextSibling);
+    });
+</script>
+</body>
+</html>

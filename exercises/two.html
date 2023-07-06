@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercícios parte 2</title>
+    <style>
+			.button {
+				background-color: #007bff;
+				color: #fff;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+
+			.button:hover {
+				background-color: #0056b3;
+			}
+
+			.button.clicked {
+				background-color: #dc3545;
+			}
+		</style>
+</head>
+<body>
+<header>
+    <h1 style="text-align: center">Exercícios parte 2</h1>
+</header>
+<main style="padding: 2% 5%;">
+    <div>
+        <h5>Aqui em baixo temos um botão, e a ideia é fazer um botão igual ao da imagem abaixo</h5>
+        <button id="myButton" class="button">Meu Botão</button>
+        <h5>Beleza, layout feito</h5>
+        <h5>Agora vamos adicionar um evento para quando passar o mouse em cima vai dar um destaque ou alguma coisa, tu decide</h5>
+        <h5>Agora um evento ao clicar, faz alguma coisa que ao clicar muda de novo, ou faz algo diferente</h5>
+    </div>
+</main>
+
+<script>
+			const button = document.getElementById('myButton');
+
+			button.addEventListener('mouseover', function() {
+				button.classList.add('hovered');
+			});
+
+			button.addEventListener('mouseout', function() {
+				button.classList.remove('hovered');
+			});
+
+			button.addEventListener('click', function() {
+				button.classList.toggle('clicked');
+			});
+		</script>
+</body>
+</html>

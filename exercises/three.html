@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercícios parte 3</title>
+</head>
+<body>
+<header>
+	<h1 style="text-align: center">Exercícios parte 3</h1>
+</header>
+<main style="padding: 2% 5%;">
+	<form>
+		<label for="nome">Nome:</label>
+		<input type="text" id="nome"><br><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email"><br><br>
+
+		<label for="opcoes">Opções:</label>
+		<select name="opcoes" id="opcoes">
+			<option value="">--</option>
+			<option value="opcao01">Opção 01</option>
+			<option value="opcao02">Opção 02</option>
+			<option value="opcao03">Opção 03</option>
+		</select><br><br>
+
+		<label for="outro">Outro:</label>
+		<input type="text" id="outro"><br><br>
+
+		<div>
+			<label for="masculino">Masculino</label>
+			<input type="radio" id="masculino" name="sexo" value="masculino">
+		</div>
+		<div>
+			<label for="feminino">Feminino</label>
+			<input type="radio" id="feminino" name="sexo" value="feminino">
+		</div><br><br>
+
+		<div>
+			<label for="cidade">Cidade:</label>
+			<input type="text" id="cidade"><br><br>
+		</div>
+
+		<div>
+			<label for="estado">Estado:</label>
+			<select name="estado" id="estado">
+				<option value="">--</option>
+				<option value="PR">PR</option>
+				<option value="SC">SC</option>
+				<option value="RS">RS</option>
+			</select><br><br>
+		</div>
+
+		<div style="margin-bottom: 20px;">
+			<label for="mensagem">Mensagem:</label><br>
+			<textarea id="mensagem" cols="35" rows="8"></textarea>
+		</div>
+
+		<label>
+			<input type="checkbox" name="newsletter" value="1"> Gostaria de receber a Newsletter da empresa
+		</label><br><br>
+
+		<input type="submit" value="Enviar">
+	</form>
+</main>
+</body>
+</html>

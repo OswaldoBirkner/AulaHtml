@@ -9,21 +9,35 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background: linear-gradient(to bottom, #F3FFC6, #C3EB78);
         }
 
         .container {
-            text-align: center;
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+        }
+
+        .sidebar {
+            flex-basis: 450px;
+            padding: 45px;
+
+        }
+
+        .content {
+            flex-grow: 1;
             padding: 20px;
         }
 
         h1 {
-            margin-top: 0;
+            margin-top: 30px;
+            color: #306B34;
         }
 
         img {
-            max-width: 100%;
+            max-width: 110%;
             height: auto;
-            border-radius: 50%;
+            border-radius: 40%;
         }
 
         ul {
@@ -37,8 +51,6 @@
         }
 
         table {
-            margin-left: auto;
-            margin-right: auto;
             border-collapse: collapse;
             width: 100%;
         }
@@ -54,46 +66,102 @@
         }
 
         footer {
-            margin-top: 20px;
+            margin-top: 30px;
             background-color: #f2f2f2;
             padding: 10px;
+            text-align: center;
         }
 
         .highlight {
             background-color: #ffcc00;
         }
-        <script>
-        function changeBackground(color) {
-            document.body.style.backgroundColor = color;
+
+        .sidebar ul li {
+            margin-bottom: 10px;
         }
-    </script>
+
+        .social-links {
+            display: flex;
+            justify-content: left;
+            margin-top: 10px;
+        }
+
+        .social-links li {
+            margin-right: 10px;
+        }
+
+        .fcc-btn {
+             color: #1C5253;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .content {
+                flex-grow: 1;
+            }
+        }
     </style>
 </head>
 <body>
-<div class="container" onmousemove="changeBackground('#ffcc00')" onmouseout="changeBackground('#ffffff')">
-    <header>
-        <h1>Meu Perfil - Oswaldo Birkner Zeferino</h1>
-        <img id="profileImg" src="fotoperfil.jpg" alt="Foto de Perfil">
-    </header>
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <img style="margin-bottom: 25px" id="profileImg" src="fotoperfil.jpg" alt="Foto de Perfil">
+            <li><a href="#about" class="fcc-btn">Sobre mim </a></li>
+            <li><a href="#social" class="fcc-btn">Minhas redes sociais</a></li>
+            <li><a href="#education" class="fcc-btn">Educação</a></li>
+            <li><a href="#experience" class="fcc-btn">Experiência Profissional</a></li>
+        </ul>
+    </div>
 
-    <main>
-        <section>
+    <div class="content">
+        <header>
+            <h1>Meu Perfil</h1>
+        </header>
+
+        <div id="about">
             <h2>Sobre mim</h2>
-            <p>Meu nome é Oswaldo Birkner Zeferino, tenho 24 anos, trabalho com administração,<br>
-                e estou buscando novos conhecimentos nesse curso, curto aprender e acredito <br>
-                que num futuro próximo eu possa estar trabalhando na área de desenvolvimento.</p>
-        </section>
+            <p>Meu nome é Oswaldo Birkner Zeferino e tenho 24 anos. Atualmente trabalho na área de administração, mas
+                estou em busca de novos conhecimentos e desafios para expandir meus horizontes profissionais. Tenho um
+                espírito curioso e uma sede insaciável por aprendizado, acredito que essa busca constante por
+                conhecimento me levará a novas oportunidades e, quem sabe, ao campo do desenvolvimento no futuro.</p>
 
-        <section>
+            <p>Além de minha paixão pela área profissional, tenho interesses variados que enriquecem minha vida. Uma das
+                minhas grandes paixões é o mundo das motos. A liberdade, a emoção e a aventura que elas proporcionam são
+                simplesmente fascinantes para mim. A sensação de acelerar pelas estradas, sentindo o vento no rosto e
+                explorando novos caminhos, é algo que me inspira e me faz sentir vivo.</p>
+
+            <p>Outro interesse que ocupa um lugar especial no meu coração é o futebol. Eu não apenas aprecio o esporte
+                como jogador, mas também sou um entusiasta das principais ligas e campeonatos. Acompanhar as partidas,
+                torcer pelo meu time favorito e vibrar com os gols é algo que me traz alegria e uma sensação de
+                pertencimento a algo maior. O futebol é uma linguagem universal que conecta pessoas ao redor do mundo,
+                e eu adoro fazer parte dessa comunidade apaixonada.</p>
+
+            <p>Além disso, viajar é uma das minhas maiores paixões. Descobrir novos lugares, mergulhar em diferentes
+                culturas e experimentar novas aventuras são experiências que me enchem de entusiasmo. Seja explorando
+                destinos exóticos ou visitando locais escondidos em minha própria região, a diversidade e a riqueza que
+                o mundo oferece são verdadeiramente fascinantes para mim. Cada viagem é uma oportunidade de crescimento
+                pessoal e de criar memórias inesquecíveis.</p>
+
+            <p>Essas são algumas das facetas que compõem quem eu sou. Um indivíduo em busca de crescimento profissional,
+                apaixonado por motos, futebol e viagens. Acredito que, ao equilibrar esses interesses e incorporá-los
+                em minha vida, posso encontrar inspiração e motivação para enfrentar novos desafios e construir um
+                futuro promissor. Estou animado para embarcar nessa jornada e descobrir o que o destino reserva para mim.</p>
+        </div>
+
+        <div id="social">
             <h2>Minhas redes sociais</h2>
-            <ul>
-                <li><a href="https://www.facebook.com/oswaldo.birknerz" target="_blank">Facebook</a></li>
-                <li><a href="https://twitter.com/BirknerOswaldo" target="_blank">Twitter</a></li>
-                <li><a href="https://www.instagram.com/OSWALDO_BIRKNER" target="_blank">Instagram</a></li>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/oswaldo.birknerz" target="_blank" class="fcc-btn">Facebook</a></li>
+                <li><a href="https://twitter.com/BirknerOswaldo" target="_blank" class="fcc-btn">Twitter</a></li>
+                <li><a href="https://www.instagram.com/OSWALDO_BIRKNER" target="_blank" class="fcc-btn">Instagram</a></li>
             </ul>
-        </section>
+        </div>
 
-        <section>
+        <div id="education">
             <h2>Educação</h2>
             <table>
                 <tr>
@@ -117,9 +185,9 @@
                     <td>2017</td>
                 </tr>
             </table>
-        </section>
+        </div>
 
-        <section>
+        <div id="experience">
             <h2>Experiência Profissional</h2>
             <table>
                 <tr>
@@ -143,39 +211,12 @@
                     <td>2020 - Presente</td>
                 </tr>
             </table>
-        </section>
-    </main>
+        </div>
 
-    <footer>
-        <p>&copy; 2023 - Oswaldo Birkner Zeferino. Todos os direitos reservados</p>
-    </footer>
+        <footer>
+            <p>&copy; 2023 - Oswaldo Birkner Zeferino. Todos os direitos reservados</p>
+        </footer>
+    </div>
 </div>
-
-<script>
-    // Mudar a cor de fundo ao passar o mouse
-    var profileImg = document.getElementById('profileImg');
-    profileImg.addEventListener('mouseover', function() {
-        profileImg.style.backgroundColor = '#ffcc00';
-    });
-    profileImg.addEventListener('mouseout', function() {
-        profileImg.style.backgroundColor = '';
-    });
-
-    // Mover a imagem ao clicar
-    profileImg.addEventListener('click', function() {
-        profileImg.style.transform = 'translate(100px, 100px)';
-        setTimeout(function() {
-            profileImg.style.transform = '';
-        }, 1000);
-    });
-
-    // Exibir um texto ao sair da imagem
-    profileImg.addEventListener('mouseout', function() {
-        var message = document.createElement('p');
-        message.textContent = 'Volte aqui!';
-        message.style.color = 'red';
-        profileImg.parentNode.insertBefore(message, profileImg.nextSibling);
-    });
-</script>
 </body>
 </html>
